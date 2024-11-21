@@ -1,0 +1,41 @@
+extends layout 
+
+block content 
+
+    doctype html
+    html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Casita de Aseo Bravid
+        link(rel="stylesheet", href="style.css")
+
+    body
+        center
+            header#contene
+                form(action "/registrarse/", method="post")
+                    img(src="images/logo.jpg", width="120")
+                    h2.aseo Casita de Aseo Bravid
+                    h1#regi Registrarse
+
+                    .let Nombres y Apellidos
+                    input#nombre(type="nombre", name="nombre", required)
+
+                    .let Número de celular
+                    input#number(type="number", name="number", required)
+
+                    .let Email
+                    input.email(type="email", name="email", required)
+
+                    .let Contraseña
+                    input.password(type="password", name="password", required)
+
+                    .let Confirmar Contraseña
+                    input.password(type="password", required)
+
+                    br
+                    button#reg Registrarse
+
+                    .opti
+                        #sub Ya Tienes Cuenta?
+                        a#iniciar(href="/iniciar_sesion") Iniciar Sesion

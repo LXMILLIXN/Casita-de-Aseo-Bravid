@@ -1,0 +1,62 @@
+extends layout 
+
+block content 
+
+    doctype html
+    html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Casita de Aseo Bravid
+        link(rel="stylesheet", href="style.css")
+
+    body
+        header
+            .contenedor 
+                .logo
+                    a(href="/iniciar_sesion/begin")
+                        img(src="/images/logo.jpg", width="100")
+
+                .casita
+                    h1 Casita de Aseo Bravid
+                    
+                form.login-form(action="search.php", method="get", style="margin-top: 20px;")
+                    input.search(type="search", name="search", placeholder="Buscar...", required)
+                    .lupa
+                        button.tt(type="submit")
+                            img(src="/images/lupa.png", width="50")
+
+
+                .carrito
+                    center
+                        a(href="/carrito")
+                            img(src="/images/carrito.png", width="50")
+                .us
+                    .hola
+                        center
+                            h2 Hola CARLOS!
+                    .perfil
+                        center
+                            botton
+                                img(src="/images/perfil.png", width="50")
+        
+            center
+                img(src="/images/perfil.png", width="50")  
+                h1 
+                a(href="/usuario") Perfil 
+                h1 
+                a(href="/") Cerrar Sesion 
+
+        center
+            .car
+                #can
+                    img(src="/images/carrito.png", width="150")
+                #parece
+                    h1 Parece que aun no hay nada
+
+            #tot
+                h1    
+                    #total(style="margin-right: 90px;") Total $ 0
+                button#comprar Comprar Ahora                   
+
+

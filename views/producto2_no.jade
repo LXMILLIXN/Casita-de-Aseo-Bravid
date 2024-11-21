@@ -1,0 +1,68 @@
+extends layout 
+
+block content 
+
+    doctype html
+    html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Casita de Aseo Bravid
+        link(rel="stylesheet", href="style.css")
+
+    body
+        header
+            .contenedor 
+                .logo
+                    a(href="/")
+                        img(src="/images/logo.jpg", width="100")
+
+                .casita
+                    h1 Casita de Aseo Bravid
+                    
+                form.login-form(action="search.php", method="get", style="margin-top: 20px;")
+                    input.search(type="search", name="search", placeholder="Buscar...", required)
+                    .lupa
+                        button.tt(type="submit")
+                            img(src="/images/lupa.png", width="50")
+
+                .carrito
+                    center
+                        a(href="/iniciar_sesion")
+                            img(src="/images/carrito.png", width="50")
+                .us
+                    .hola
+                        center
+                            h2 Hola Usuario!
+                    .perfil
+                        center
+                            botton
+                                img(src="/images/perfil.png", width="50")
+
+            center
+                img(src="/images/perfil.png", width="50")   
+                div 
+                a(href="/registrarse")  Registrarse 
+                div 
+                a(href="/iniciar_sesion") Iniciar Sesion
+
+
+            center
+                .contenedor2
+                    #prods
+                        img(src="images/dove.png", width="500")
+                        #veni
+                            h1 Jabon dove blanco tripack
+
+                    .options
+                        #two
+                            h1 $18.200
+                            
+                        .product-quantity
+                            button.decrease(onclick="changeQuantity(-1)") -
+                            input.quantity(type="text", value="1", readonly)
+                            button.aumentar(onclick="changeQuantity(1)") +
+
+                    #com
+                        button#comprar Comprar Ahora
+                        button#agregar Añadir al carrito

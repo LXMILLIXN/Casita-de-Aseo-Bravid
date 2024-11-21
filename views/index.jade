@@ -1,0 +1,76 @@
+extends layout 
+
+block content 
+
+    doctype html
+    html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Casita de Aseo Bravid
+        link(rel="stylesheet", href="style.css")
+
+    body
+        header
+            .contenedor 
+                .logo
+                    a(href="/")
+                        img(src="/images/logo.jpg", width="100")
+
+                .casita
+                    h1 Casita de Aseo Bravid
+                    
+                form.login-form(action="/busqueda/user", method="post", style="margin-top: 20px;")
+                    input.search(type="text", name="search", placeholder="Buscar...", required)
+                    .lupa
+                        button.tt(type="submit")
+                            img(src="/images/lupa.png", width="50")
+
+                .carrito
+                    center
+                        a(href="/iniciar_sesion")
+                            img(src="/images/carrito.png", width="50")
+                .us
+                    .hola
+                        h2 Hola Usuario!
+
+                    botton.perfil
+                        img(src="/images/perfil.png", width="50")
+     
+            center
+                img(src="/images/perfil.png", width="50")   
+                div 
+                a(href="/registrarse")  Registrarse 
+                div 
+                a(href="/iniciar_sesion") Iniciar Sesion
+
+            center
+                .contenedor1
+                    h2 Productos Recomendados
+
+                    .tresd
+                    center 
+                        img(src="/images/logo.jpg", width="200")
+                        a.yy(href="/producto1_no") 
+                            div
+                                h1 Detergente En Polvo 3D
+                            div
+                                h1 $25000
+
+                    .jabo
+                    center 
+                        img(src="/images/logo.jpg", width="200")
+                        a.yy(href="/producto2_no") 
+                            div
+                                h1 Jabon dove blanco tripack
+                            div
+                                h1 $18200
+
+                    .venu
+                    center
+                        img(src="/images/logo.jpg", width="200")
+                        a.yy(href="/producto3_no") 
+                            div
+                                h1 Papel Familia Familiar x 1 und 27 m
+                            div
+                                h1 $1400

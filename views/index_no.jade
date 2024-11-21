@@ -1,0 +1,63 @@
+extends layout 
+
+block content 
+
+    doctype html
+    html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Casita de Aseo Bravid
+        link(rel="stylesheet", href="style.css")
+
+    body
+        header
+            .contenedor 
+                .logo
+                    a(href="/iniciar_sesion/")
+                        img(src="/images/logo.jpg", width="100")
+
+                .casita
+                    h1 Casita de Aseo Bravid
+                    
+                form.login-form(action="/busqueda/user", method="post", style="margin-top: 20px;")
+                    input.search(type="text", name="search", placeholder="Buscar...", required)
+                    .lupa
+                        button.tt(type="submit")
+                            img(src="/images/lupa.png", width="50")
+
+                .carrito
+                    center
+                        a(href="/carrito")
+                            img(src="/images/carrito.png", width="50")
+                .us
+                    .hola
+                        center
+                            h2 Hola #{usuario}!
+                    .perfil
+                        center
+                            botton
+                                img(src="/images/perfil.png", width="50")
+ 
+            center
+                img(src="/images/perfil.png", width="50")   
+                div 
+                a(href="/usuario")  Perfil 
+                div 
+                a(href="/") Cerrar Sesion
+
+            center
+                .contenedor1
+                    h2 Nuestros productos:
+
+                        br
+                        - for (let i = 0; i < productos.length; i++) {
+                            a.yy(href="/producto#{i}")
+                                br.tresd
+                                img#produ(src="/images/logo.jpg", width="200")
+                                div
+                                    h2.di #{productos[i].nombre}    
+                                div
+                                    h2.yy $#{productos[i].precio}
+                        - }
+                            br
